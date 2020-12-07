@@ -34,6 +34,7 @@ spec:
     }
     stages {
         stage("Build") {
+            agent { docker { image 'gradle' }
             steps {
                 echo "Some code compilation here..."
                 sh "chmod +x gradlew && ./gradlew build"
