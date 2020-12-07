@@ -5,7 +5,7 @@ pipeline {
         stage("Build") {
             steps {
                 echo "Some code compilation here..."
-                sh "./gradlew build"
+                sh "chmod +x gradlew && ./gradlew build"
             }
         }
 
